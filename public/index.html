@@ -9,7 +9,7 @@
   </head>
 
   <body class="bg-slate-100 min-h-screen">
-    <!-- HEADER -->
+     <!--Header-->
     <header class="bg-slate-900 text-white px-6 py-4 flex items-center justify-between">
       <div>
         <h1 class="text-2xl font-bold tracking-tight">GameZone Store</h1>
@@ -18,9 +18,9 @@
       <span class="text-xs text-slate-300">v1.0 · demo educativa</span>
     </header>
 
-    <!-- CONTENIDO -->
+    <!-- Contenido -->
     <main class="p-6 max-w-6xl mx-auto">
-      <!-- BARRA DE BÚSQUEDA / CONTROLES -->
+      <!-- Barra de busqueda -->
       <section class="mb-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div class="flex items-center gap-2 w-full md:max-w-md">
           <input
@@ -38,7 +38,7 @@
         </div>
 
         <div class="flex gap-2">
-          <!-- FILTRO POR TIENDA -->
+          <!-- Filtro por tienda -->
           <select
             id="select-tienda"
             class="rounded-lg border border-slate-200 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-slate-400"
@@ -49,7 +49,7 @@
             <option value="11">Humble Store</option>
           </select>
 
-          <!-- ORDENAMIENTO -->
+          <!-- Ordenamiento -->
           <select
             id="select-orden"
             class="rounded-lg border border-slate-200 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-slate-400"
@@ -61,7 +61,7 @@
         </div>
       </section>
 
-      <!-- GRID DE VIDEOJUEGOS -->
+      <!-- Grid de los videojuegos -->
       <section>
         <h2 class="text-lg font-semibold mb-4 text-slate-800">
           Videojuegos destacados
@@ -84,7 +84,7 @@
           class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
         ></div>
 
-        <!-- BOTÓN VER MÁS -->
+        <!-- Boton de ver mas -->
         <button
           id="btn-ver-mas"
           class="mt-6 mx-auto block px-4 py-2 bg-white text-black font-bold border border-slate-300 rounded-lg hover:bg-slate-100 hidden"
@@ -95,7 +95,7 @@
       </section>
     </main>
 
-    <!-- MODAL DE DETALLE -->
+    <!-- Modal de detalle -->
     <div
       id="modal"
       class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"

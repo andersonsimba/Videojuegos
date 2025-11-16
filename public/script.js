@@ -1,6 +1,4 @@
-// ========================
-//  SELECCIÓN DEL DOM
-// ========================
+//  Seleccion del Dom
 const grid = document.querySelector('#grid-videojuegos');
 const spinner = document.querySelector('#spinner');
 const estadoError = document.querySelector('#estado-error');
@@ -23,16 +21,11 @@ const modalLink = document.querySelector('#modal-link');
 const modalCerrar = document.querySelector('#modal-cerrar');
 
 
-// ========================
-//  STATE GLOBAL
-// ========================
 let pagina = 0; // Para el botón "VER MÁS"
 let juegosActuales = []; // Para filtros y ordenamientos
 
+//  Render de tarjetas
 
-// ========================
-//  RENDER DE TARJETAS
-// ========================
 function renderVideojuegos(lista) {
     grid.innerHTML = '';
 
@@ -80,10 +73,8 @@ function renderVideojuegos(lista) {
 }
 
 
+// Modal
 
-// ========================
-//   MODAL
-// ========================
 function abrirModal(juego) {
     modalImg.src = juego.thumb || juego.thumbnail || "";
     modalTitulo.textContent = juego.title || juego.external || "Juego";
@@ -107,10 +98,8 @@ modal.addEventListener('click', (e) => {
 });
 
 
+// Carga inicial
 
-// ========================
-//  CARGA INICIAL
-// ========================
 async function cargarVideojuegosInicial() {
     spinner.classList.remove('hidden');
     estadoError.classList.add('hidden');
@@ -141,21 +130,15 @@ async function cargarVideojuegosInicial() {
 
 cargarVideojuegosInicial();
 
+//  VER MÁS 
 
-
-// ========================
-//   VER MÁS (Paginación)
-// ========================
 btnVerMas.addEventListener('click', () => {
     pagina++;
     cargarVideojuegosInicial();
 });
 
+// Busqueda
 
-
-// ========================
-//   BÚSQUEDA
-// ========================
 async function buscarVideojuegos() {
     const texto = inputBusqueda.value.trim();
     if (texto === "") return;
@@ -185,10 +168,8 @@ async function buscarVideojuegos() {
 btnBuscar.addEventListener('click', buscarVideojuegos);
 
 
+// Filtrado por tienda
 
-// ========================
-//    FILTRADO POR TIENDA
-// ========================
 selectTienda.addEventListener('change', () => {
     const tienda = selectTienda.value;
 
@@ -202,10 +183,8 @@ selectTienda.addEventListener('change', () => {
 });
 
 
+// Ordenamiento
 
-// ========================
-//   ORDENAMIENTO POR PRECIO
-// ========================
 selectOrden.addEventListener('change', () => {
     let lista = [...juegosActuales];
 
